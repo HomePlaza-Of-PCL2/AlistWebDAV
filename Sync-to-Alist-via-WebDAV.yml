@@ -40,7 +40,7 @@ jobs:
           rclone copy Custom.xaml alist_webdav:/ --checksum --size-only --retries 3
           rclone copy Custom.xaml.ini alist_webdav:/ --checksum --size-only --retries 3
 
-      # 1清理 rclone 配置
+      # 清理 rclone 配置
       - name: 🧹 Clean up rclone config
         if: always()
         run: rm -rf ~/.config/rclone
